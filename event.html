@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>이벤트 페이지</title>
+
+    <!-- CSS 스타일 -->
+    <style>
+        /* 기본 스타일 */
+        body {
+          
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+        }
+
+        /* 이벤트 소개 섹션 */
+        .event-intro {
+
+            background-image: url(구름.jpg);
+            background-size: cover;
+            background-position: center center;
+            text-align: center;
+            padding: 50px 20px;
+           
+            color: white;
+        }
+
+        .event-intro h1 {
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+
+        .event-intro p {
+            font-size: 18px;
+            margin-bottom: 40px;
+            line-height: 1.6;
+        }
+         /* 이미지 섹션 */
+    .event-pic {
+        margin-top: 30px;
+        display: flex;
+        flex-direction: column; /* 이미지들을 세로로 나열 */
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 30px; /* 섹션 간 간격 */
+        font-size: 20px;
+    }
+
+    .event-pic img {
+        width: 50%; /* 이미지 크기 설정 */
+        height: auto;
+        margin-bottom: 20px; /* 이미지 간격 */
+        
+    }
+
+        /* 폼 섹션 */
+        .event-form {
+            display: flex;
+            justify-content: center;
+            padding: 40px 20px;
+        }
+
+        .form-container {
+            background-color: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 600px;
+        }
+
+        .form-container h2 {
+            text-align: center;
+            font-size: 28px;
+            margin-bottom: 30px;
+        }
+
+        .form-container label {
+            font-size: 16px;
+            margin-bottom: 10px;
+            display: block;
+        }
+
+        .form-container input, .form-container textarea {
+            width: 200%;
+            padding: 12px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 16px;
+        }
+
+        .form-container textarea {
+            height: 150px;
+            resize: none;
+        }
+
+        .form-container button {
+            background-color: orange;
+            color: white;
+            border: none;
+            padding: 15px 25px;
+            font-size: 18px;
+            border-radius: 4px;
+            cursor: pointer;
+            width: 100%;
+        }
+
+        .form-container button:hover {
+            background-color: orange;
+        }
+         /* 푸터 */
+         footer {
+            background-image: url(구름.jpg);
+            background-size: cover;
+            background-position: center center;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            margin-top: 40px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- 이벤트 소개 섹션 -->
+    <div class="event-intro">
+        <h1>! EVENT 블로거의 밤 !</h1>
+        <p>수현 블로그에서 진행하는 특별한 행사에 참여해보세요. <br>
+            다양한 음식과 재밌는 게임이 기다리고 있습니다. <br>
+            <br>
+            아래 폼을 작성하여 신청해주세요.</p>
+    </div>
+
+    <div class="event-pic">
+        <img src="음식.jpg" alt="음식사진">
+        날짜 :                                 <br>
+        장소 :                                  <br>
+        비용 :                                  <br>
+        <img src="단체게임.jpg" alt="음식사진">
+        행사내용 :                              <br>
+        협찬식당 :                              <br>
+    </div>
+
+    <!-- 신청 폼 섹션 -->
+    <div class="event-form">
+        <div class="form-container">
+            <h2>이벤트 신청</h2>
+
+            <form action="#" method="POST">
+                <!-- 테이블로 입력 항목 구성 -->
+                <table>
+                    <tr>
+                        <th>이름</th>
+                        <td><input type="text" id="name" name="name" required placeholder="이름을 입력해주세요"></td>
+                    </tr>
+                    <tr>
+                        <th>나이</th>
+                        <td><input type="number" id="age" name="age" required placeholder="나이를 입력해주세요"></td>
+                    </tr>
+                    <tr>
+                        <th>블로그 주소</th>
+                        <td><input type="url" id="blog-url" name="blog-url" required placeholder="블로그 URL을 입력해주세요"></td>
+                    </tr>
+                    <tr>
+                        <th>신청 동기</th>
+                        <td><textarea id="motivation" name="motivation" required placeholder="신청 동기를 작성해주세요"></textarea></td>
+                    </tr>
+                </table>
+
+                <!-- 제출 버튼 -->
+                <button type="submit">신청하기</button>
+            </form>
+        </div>
+    </div>
+ <!-- 푸터 -->
+ <footer>
+    <p>&copy; 2025 수현블로그. All rights reserved.</p>
+</footer>
+</body>
+</html>
